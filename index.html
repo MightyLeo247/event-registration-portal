@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConf 2024 | Event Registration</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Event<span>Flow</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>The Tech Event of the Year</h1>
+            <p>Join us for a day of networking and innovation. Secure your spot today!</p>
+            <button id="openModal">Register Now</button>
+        </section>
+
+        <div id="regModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Register for Event</h2>
+                <form id="registrationForm">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ticketType">Ticket Type</label>
+                        <select id="ticketType">
+                            <option value="standard">Standard - Free</option>
+                            <option value="vip">VIP - $50</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Complete Registration</button>
+                </form>
+                 <div id="successState" style="display: none; text-align: center;">
+    <div class="ticket-icon">🎟️</div>
+    <h2>Registration Complete!</h2>
+    <p>Your ticket has been generated successfully.</p>
+    
+    <div class="ticket-card">
+        <h3 id="displayTicketName"></h3>
+        <p id="displayTicketEmail"></p>
+        <div class="ticket-footer">
+            <span id="displayTicketType"></span>
+            <span id="displayTicketID"></span>
+        </div>
+    </div>
+    
+    <button id="downloadBtn" class="submit-btn">Done</button>
+</div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
